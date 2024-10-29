@@ -14,7 +14,6 @@ dependencies:
   - firefox
   - opencv
   - pinocchio
-  - torchtnt
   - pip:
     - torchnet
     - numpy<2

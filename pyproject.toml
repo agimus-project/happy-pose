@@ -54,7 +54,6 @@ selenium = "^4.25.0"
 simplejson = "^3.19.3"
 torch = {optional = true, version = "^2.5.0"}
 torchnet = {optional = true, version = "^0.0.4"}
-torchtnt = {optional = true, version = "^0.2.4"}
 torchvision = {optional = true, version = "^0.20"}
 tqdm = "^4.66.5"
 transforms3d = "^0.4.1"
@@ -65,7 +64,7 @@ xarray = "^2024.10.0"
 [tool.poetry.extras]
 evaluation = ["cmeel-teaser-plusplus"]
 multiview = ["cosypose"]
-pypi = ["opencv-contrib-python", "opencv-python", "pin", "torch", "torchnet", "torchtnt", "torchvision"]
+pypi = ["opencv-contrib-python", "opencv-python", "pin", "torch", "torchnet", "torchvision"]
 
 [tool.poetry.group.dev]
 optional = true
