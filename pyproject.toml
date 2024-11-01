@@ -27,7 +27,7 @@ bokeh = "^3.6.0"
 bop_toolkit_lib = {git = "https://github.com/agimus-project/bop_toolkit"}
 cmeel-teaser-plusplus = {optional = true, version = "^2.0"}
 cosypose = {optional = true, path = "happypose/pose_estimators/cosypose"}
-httpx = "^0.25.0"
+httpx = "^0.27.2"
 imageio = "^2.36.0"
 ipython = "^8.29.0"
 joblib = "^1.4.2"
