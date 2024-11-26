@@ -94,7 +94,7 @@ scikit-image==0.24.0
 scikit-learn==1.5.2
 scipy==1.14.1
 seaborn==0.13.2
-selenium==4.26.1
+selenium==4.27.0
 setuptools==75.6.0
 simplejson==3.19.3
 six==1.16.0
