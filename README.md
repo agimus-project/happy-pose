@@ -94,7 +94,7 @@ In the HappyPose folder:
 pytest -v ./tests
 ```
 
-You may need to install `pytest-order` : `pip installp pytest-order`. In this case, test related to the `evaluation` and the `training` of CosyPose are not run. If you want to use these functionalities, you need a GPU.
+In this case, test related to the `evaluation` and the `training` of CosyPose are not run. If you want to use these functionalities, you need a GPU.
 
 ### GPU
 
