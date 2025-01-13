@@ -171,7 +171,7 @@ def megapose_forward_loss(
     time_render = 0
 
     for n in range(n_iterations):
-        iter_outputs = outputs[f"iteration={n+1}"]
+        iter_outputs = outputs[f"iteration={n + 1}"]
 
         loss_TCO_iter, loss_TCO_iter_data = None, None
         if cfg.predict_pose_update:
@@ -187,7 +187,7 @@ def megapose_forward_loss(
                 tCR=iter_outputs.tCR,
             )
             loss_TCO_iter = loss_TCO_iter.view(batch_size, n_hypotheses)
-            meters[f"loss_TCO-iter={n+1}"].add(loss_TCO_iter.mean().item())
+            meters[f"loss_TCO-iter={n + 1}"].add(loss_TCO_iter.mean().item())
             list_losses_pose.append(loss_TCO_iter)
 
         if cfg.predict_rendered_views_logits:
@@ -204,7 +204,7 @@ def megapose_forward_loss(
                 # reshape and remove invalid indices
                 # [B, n_hypotheses]
                 x = val.view(batch_size, n_hypotheses)
-                save_key = f"loss_TCO-iter={n+1}-{key}"
+                save_key = f"loss_TCO-iter={n + 1}-{key}"
                 meters[save_key].add(x.mean().item())
 
     meters["time_render"].add(time_render)

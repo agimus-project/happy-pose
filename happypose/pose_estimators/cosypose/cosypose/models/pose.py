@@ -161,7 +161,7 @@ class PosePredictor(nn.Module):
 
             TCO_output = self.update_pose(TCO_input, K_crop, model_outputs["pose"])
 
-            outputs[f"iteration={n+1}"] = {
+            outputs[f"iteration={n + 1}"] = {
                 "TCO_input": TCO_input,
                 "TCO_output": TCO_output,
                 "K_crop": K_crop,
@@ -170,7 +170,7 @@ class PosePredictor(nn.Module):
                 "boxes_crop": boxes_crop,
             }
 
-            outputs[f"iteration={n+1}"] = PosePredictorOutputCosypose(
+            outputs[f"iteration={n + 1}"] = PosePredictorOutputCosypose(
                 renders=renders.rgbs,
                 images_crop=images_crop,
                 TCO_input=TCO_input,
@@ -186,13 +186,13 @@ class PosePredictor(nn.Module):
             TCO_input = TCO_output
 
             if self.debug:
-                self.tmp_debug.update(outputs[f"iteration={n+1}"])
+                self.tmp_debug.update(outputs[f"iteration={n + 1}"])
                 self.tmp_debug.update(
                     images=images,
                     images_crop=images_crop,
                     renders=renders.rgbs,
                 )
-                path = DEBUG_DATA_DIR / f"debug_iter={n+1}.pth.tar"
+                path = DEBUG_DATA_DIR / f"debug_iter={n + 1}.pth.tar"
                 logger.info(f"Wrote debug data: {path}")
                 torch.save(self.tmp_debug, path)
 

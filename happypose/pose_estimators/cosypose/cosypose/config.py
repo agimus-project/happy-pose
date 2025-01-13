@@ -21,9 +21,9 @@ DATA_DIR = PROJECT_DIR / "data"
 LOCAL_DATA_DIR = Path(
     os.environ.get("HAPPYPOSE_DATA_DIR", Path(PROJECT_DIR) / "local_data"),
 )
-assert (
-    LOCAL_DATA_DIR.exists()
-), "Did you forget to set env variable 'HAPPYPOSE_DATA_DIR'?"
+assert LOCAL_DATA_DIR.exists(), (
+    "Did you forget to set env variable 'HAPPYPOSE_DATA_DIR'?"
+)
 TEST_DATA_DIR = LOCAL_DATA_DIR
 DASK_LOGS_DIR = LOCAL_DATA_DIR / "dasklogs"
 SYNT_DS_DIR = LOCAL_DATA_DIR / "synt_datasets"

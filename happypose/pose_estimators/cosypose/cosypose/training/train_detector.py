@@ -129,10 +129,10 @@ def train_detector(args):
     args = check_update_config(args)
     args.save_dir = EXP_DIR / args.run_id
 
-    logger.info(f"{'-'*80}")
+    logger.info(f"{'-' * 80}")
     for k, v in args.__dict__.items():
         logger.info(f"{k}: {v}")
-    logger.info(f"{'-'*80}")
+    logger.info(f"{'-' * 80}")
     # Initialize distributed
     device = torch.cuda.current_device()
     init_distributed_mode()

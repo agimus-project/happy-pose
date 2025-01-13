@@ -93,10 +93,10 @@ def get_meters(scene_ds):
 
 
 def run_detection_eval(args, detector=None):
-    logger.info(f"{'-'*80}")
+    logger.info(f"{'-' * 80}")
     for k, v in args.__dict__.items():
         logger.info(f"{k}: {v}")
-    logger.info(f"{'-'*80}")
+    logger.info(f"{'-' * 80}")
 
     scene_ds = make_scene_dataset(args.ds_name, n_frames=args.n_frames)
 

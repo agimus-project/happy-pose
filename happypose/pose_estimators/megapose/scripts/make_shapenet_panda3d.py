@@ -102,7 +102,7 @@ def fix_normals(obj_path):
             face = line_f[3:].split(" ")
             face = [f.split("/") for f in face]
             face_flipped = " ".join(
-                [f"{x[0]}/{x[1]}/{int(x[2])+n_vn_orig}" for x in face],
+                [f"{x[0]}/{x[1]}/{int(x[2]) + n_vn_orig}" for x in face],
             )
             f_flipped.append(f"f  {face_flipped}")
         block["f"] += f_flipped

@@ -161,19 +161,19 @@ def main():
         if "cosypose" in logger.name:
             logger.setLevel(logging.DEBUG)
 
-    logger.info(f"{'-'*80}")
+    logger.info(f"{'-' * 80}")
     for k, v in args.__dict__.items():
         logger.info(f"{k}: {v}")
-    logger.info(f"{'-'*80}")
+    logger.info(f"{'-' * 80}")
 
     scenario_dir = LOCAL_DATA_DIR / "custom_scenarios" / args.scenario
 
     candidates = read_csv_candidates(scenario_dir / "candidates.csv").float().cuda()
     candidates.infos["group_id"] = 0
     scene_ids = np.unique(candidates.infos["scene_id"])
-    assert (
-        len(scene_ids) == 1
-    ), "Please only provide 6D pose estimations that correspond to the same scene."
+    assert len(scene_ids) == 1, (
+        "Please only provide 6D pose estimations that correspond to the same scene."
+    )
     scene_id = scene_ids.item()
     view_ids = np.unique(candidates.infos["view_id"])
     n_views = len(view_ids)

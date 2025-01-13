@@ -17,7 +17,7 @@ class BodyCache:
     def _load_body(self, label):
         ds_idx = np.where(self.urdf_ds.index["label"] == label)[0]
         if len(ds_idx) == 0:
-            raise ValueError(f'Label {label} not in {self.urdf_ds.index["label"]}')
+            raise ValueError(f"Label {label} not in {self.urdf_ds.index['label']}")
         object_infos = self.urdf_ds[ds_idx.item()].to_dict()
         body = Body.load(
             object_infos["urdf_path"],

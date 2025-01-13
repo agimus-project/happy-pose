@@ -63,14 +63,14 @@ def format_results(predictions, eval_metrics, eval_dfs, print_metrics=True):
     df = defaultdict(list)
     summary_txt = ""
     for k, v in eval_metrics.items():
-        summary_txt += f"\n{k}\n{'-'*80}\n"
+        summary_txt += f"\n{k}\n{'-' * 80}\n"
         for k_, v_ in v.items():
             summary[f"{k}/{k_}"] = v_
             df["method"].append(k)
             df["metric"].append(k_)
             df["value"].append(v_)
             summary_txt += f"{k}/{k_}: {v_}\n"
-        summary_txt += f"{'-'*80}"
+        summary_txt += f"{'-' * 80}"
     if print_metrics:
         logger.info(summary_txt)
 

@@ -527,8 +527,7 @@ def main():
             f"CLASS/AUC/objects/mean"
         )
         k_4 = (
-            f"{det_key}/ba_output+all_cand/ADD-S_ntop=1_matching="
-            f"CLASS/AUC/objects/mean"
+            f"{det_key}/ba_output+all_cand/ADD-S_ntop=1_matching=CLASS/AUC/objects/mean"
         )
         metrics_to_print.update(
             {
@@ -595,9 +594,9 @@ def main():
         for k, v in metrics_to_print.items():
             if k in full_summary:
                 summary_txt += f"\n{v}: {full_summary[k]}"
-        logger.info(f"{'-'*80}")
+        logger.info(f"{'-' * 80}")
         logger.info(summary_txt)
-        logger.info(f"{'-'*80}")
+        logger.info(f"{'-' * 80}")
 
         torch.save(results, save_dir / "results.pth.tar")
         (save_dir / "summary.txt").write_text(summary_txt)

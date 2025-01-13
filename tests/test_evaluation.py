@@ -80,73 +80,73 @@ class TestCosyPoseEvaluation:
     def test_config(self):
         assert self.eval_cfg is not None
         assert len(self.eval_cfg) == 1
-        assert (
-            self.cfg["detector_run_id"] == "bop_pbr"
-        ), "Error: detector_run_id is not correct"
-        assert (
-            self.cfg["coarse_run_id"] == "coarse-bop-ycbv-pbr--724183"
-        ), "Error: coarse_run_id is not correct"
-        assert (
-            self.cfg["refiner_run_id"] == "refiner-bop-ycbv-pbr--604090"
-        ), "Error: refiner_run_id is not correct"
+        assert self.cfg["detector_run_id"] == "bop_pbr", (
+            "Error: detector_run_id is not correct"
+        )
+        assert self.cfg["coarse_run_id"] == "coarse-bop-ycbv-pbr--724183", (
+            "Error: coarse_run_id is not correct"
+        )
+        assert self.cfg["refiner_run_id"] == "refiner-bop-ycbv-pbr--604090", (
+            "Error: refiner_run_id is not correct"
+        )
         assert self.cfg["ds_name"] == "ycbv.bop19", "Error: ds_name is not correct"
-        assert (
-            self.cfg["inference"]["detection_type"] == "detector"
-        ), "Error: detection_type is not correct"
-        assert (
-            self.cfg["inference"]["coarse_estimation_type"] == "SO3_grid"
-        ), "Error: coarse_estimation_type is not correct"
-        assert (
-            self.cfg["inference"]["SO3_grid_size"] == 576
-        ), "Error: SO3_grid_size is not correct"
-        assert (
-            self.cfg["inference"]["n_refiner_iterations"] == 5
-        ), "Error: n_refiner_iterations is not correct"
-        assert (
-            self.cfg["inference"]["n_pose_hypotheses"] == 5
-        ), "Error: n_pose_hypotheses is not correct"
-        assert not self.cfg["inference"][
-            "run_depth_refiner"
-        ], "Error: run_depth_refiner is not correct"
-        assert (
-            self.cfg["inference"]["depth_refiner"] is None
-        ), "Error: depth_refiner is not correct"
-        assert (
-            self.cfg["inference"]["bsz_objects"] == 16
-        ), "Error: bsz_objects is not correct"
-        assert (
-            self.cfg["inference"]["bsz_images"] == 288
-        ), "Error: bsz_images is not correct"
+        assert self.cfg["inference"]["detection_type"] == "detector", (
+            "Error: detection_type is not correct"
+        )
+        assert self.cfg["inference"]["coarse_estimation_type"] == "SO3_grid", (
+            "Error: coarse_estimation_type is not correct"
+        )
+        assert self.cfg["inference"]["SO3_grid_size"] == 576, (
+            "Error: SO3_grid_size is not correct"
+        )
+        assert self.cfg["inference"]["n_refiner_iterations"] == 5, (
+            "Error: n_refiner_iterations is not correct"
+        )
+        assert self.cfg["inference"]["n_pose_hypotheses"] == 5, (
+            "Error: n_pose_hypotheses is not correct"
+        )
+        assert not self.cfg["inference"]["run_depth_refiner"], (
+            "Error: run_depth_refiner is not correct"
+        )
+        assert self.cfg["inference"]["depth_refiner"] is None, (
+            "Error: depth_refiner is not correct"
+        )
+        assert self.cfg["inference"]["bsz_objects"] == 16, (
+            "Error: bsz_objects is not correct"
+        )
+        assert self.cfg["inference"]["bsz_images"] == 288, (
+            "Error: bsz_images is not correct"
+        )
         assert self.cfg["result_id"] == "ycbv-debug", "Error: result_id is not correct"
-        assert (
-            self.cfg["n_dataloader_workers"] == 8
-        ), "Error: n_dataloader_workers is not correct"
-        assert (
-            self.cfg["n_rendering_workers"] == 8
-        ), "Error: n_rendering_workers is not correct"
+        assert self.cfg["n_dataloader_workers"] == 8, (
+            "Error: n_dataloader_workers is not correct"
+        )
+        assert self.cfg["n_rendering_workers"] == 8, (
+            "Error: n_rendering_workers is not correct"
+        )
         assert self.cfg["n_frames"] is None, "Error: n_frames is not correct"
         assert self.cfg["batch_size"] == 1, "Error: batch_size is not correct"
-        assert (
-            self.cfg["save_dir"] == f"{LOCAL_DATA_DIR}/results/ycbv-debug"
-        ), "Error: save_dir is not correct"
+        assert self.cfg["save_dir"] == f"{LOCAL_DATA_DIR}/results/ycbv-debug", (
+            "Error: save_dir is not correct"
+        )
         assert self.cfg["bsz_images"] == 256, "Error: bsz_images is not correct"
         assert self.cfg["bsz_objects"] == 16, "Error: bsz_objects is not correct"
         assert self.cfg["skip_inference"], "Error: skip_inference is not correct"
         assert self.cfg["skip_evaluation"], "Error: skip_evaluation is not correct"
-        assert (
-            self.cfg["global_batch_size"] is None
-        ), "Error: global_batch_size is not correct"
+        assert self.cfg["global_batch_size"] is None, (
+            "Error: global_batch_size is not correct"
+        )
         assert self.cfg["hardware"]["n_cpus"] == 10, "Error: n_cpus is not correct"
         assert self.cfg["hardware"]["n_gpus"] == 1, "Error: n_gpus is not correct"
         assert not self.cfg["debug"], "Error: debug is not correct"
-        assert self.cfg["detection_coarse_types"] == [
-            ["detector", "S03_grid"]
-        ], "Error: detection_coarse_types is not correct"
+        assert self.cfg["detection_coarse_types"] == [["detector", "S03_grid"]], (
+            "Error: detection_coarse_types is not correct"
+        )
         assert self.cfg["ds_names"] == ["ycbv.bop19"], "Error: ds_names is not correct"
         assert self.cfg["run_bop_eval"], "Error: run_bop_eval is not correct"
-        assert not self.cfg[
-            "eval_coarse_also"
-        ], "Error: eval_coarse_also is not correct"
+        assert not self.cfg["eval_coarse_also"], (
+            "Error: eval_coarse_also is not correct"
+        )
         assert not self.cfg["convert_only"], "Error: convert_only is not correct"
 
     # TODO

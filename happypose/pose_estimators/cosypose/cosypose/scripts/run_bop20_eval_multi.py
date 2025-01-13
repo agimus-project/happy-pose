@@ -55,14 +55,14 @@ def main():
         proc.join()
 
     for _ in range(10):
-        print(f"{'-'*80}")
+        print(f"{'-' * 80}")
 
     for ds_name, (cfg, _) in processes.items():
         results_dir = (
             LOCAL_DATA_DIR / "bop_eval_outputs" / cfg.csv_path.with_suffix("").name
         )
         scores_path = results_dir / "scores_bop19.json"
-        print(f"{'-'*80}")
+        print(f"{'-' * 80}")
         print(f"{ds_name}: {scores_path}")
         print(scores_path.read_text())
 

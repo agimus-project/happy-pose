@@ -651,7 +651,7 @@ class PosePredictor(nn.Module):
                     device=device,
                 )
 
-            outputs[f"iteration={n+1}"] = PosePredictorOutput(
+            outputs[f"iteration={n + 1}"] = PosePredictorOutput(
                 renders=renders,
                 images_crop=images_crop,
                 TCO_input=TCO_input,
@@ -669,7 +669,7 @@ class PosePredictor(nn.Module):
                 timing_dict=timing_dict,
             )
             if self.debug:
-                self.debug_data.output = outputs[f"iteration={n+1}"]
+                self.debug_data.output = outputs[f"iteration={n + 1}"]
             TCO_input = TCO_output
         return outputs
 
@@ -689,9 +689,9 @@ class PosePredictor(nn.Module):
                 input + rendered image
 
         """
-        assert (
-            self.predict_rendered_views_logits
-        ), "Method only valid if coarse classification model"
+        assert self.predict_rendered_views_logits, (
+            "Method only valid if coarse classification model"
+        )
         if torch.cuda.is_available():
             timer = CudaTimer(enabled=cuda_timer)
         else:
@@ -738,9 +738,9 @@ class PosePredictor(nn.Module):
 
         """
 
-        assert (
-            self.predict_rendered_views_logits
-        ), "Method only valid if coarse classification model"
+        assert self.predict_rendered_views_logits, (
+            "Method only valid if coarse classification model"
+        )
 
         if not self.input_depth:
             # Remove the depth dimension if it is not used

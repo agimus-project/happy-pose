@@ -31,9 +31,9 @@ PROJECT_DIR = PROJECT_ROOT
 LOCAL_DATA_DIR = Path(
     os.environ.get("HAPPYPOSE_DATA_DIR", Path(PROJECT_DIR) / "local_data"),
 )
-assert (
-    LOCAL_DATA_DIR.exists()
-), "Did you forget to set env variable 'HAPPYPOSE_DATA_DIR'?"
+assert LOCAL_DATA_DIR.exists(), (
+    "Did you forget to set env variable 'HAPPYPOSE_DATA_DIR'?"
+)
 BOP_DS_DIR = LOCAL_DATA_DIR / "bop_datasets"
 NB_DATA_DIR = LOCAL_DATA_DIR / "notebook_data"
 SHAPENET_DIR = LOCAL_DATA_DIR / "shapenetcorev2"

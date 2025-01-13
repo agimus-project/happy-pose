@@ -78,9 +78,9 @@ if __name__ == "__main__":
     data_dir = os.getenv("HAPPYPOSE_DATA_DIR")
     assert data_dir, "Set HAPPYPOSE_DATA_DIR env variable"
     example_dir = Path(data_dir) / "examples" / args.example_name
-    assert (
-        example_dir.exists()
-    ), "Example {args.example_name} not available, follow download instructions"
+    assert example_dir.exists(), (
+        "Example {args.example_name} not available, follow download instructions"
+    )
 
     # Load data
     object_dataset = make_example_object_dataset(example_dir)
