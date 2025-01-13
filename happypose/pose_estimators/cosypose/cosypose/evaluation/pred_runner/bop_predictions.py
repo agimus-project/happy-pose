@@ -103,7 +103,7 @@ class BopPredictionRunner:
             depth = None
             if self.load_depth:
                 depth = data["depth"].cuda().float()
-            logger.debug(f"{'-'*80}")
+            logger.debug(f"{'-' * 80}")
             logger.debug(f"Predictions on {data['im_infos']}")
 
             def get_preds():
@@ -155,7 +155,7 @@ class BopPredictionRunner:
                     f"Full predictions: {n_dets} detections + pose estimation "
                     f"in {duration:.3f} s",
                 )
-                logger.debug(f"{'-'*80}")
+                logger.debug(f"{'-' * 80}")
                 return this_batch_detections, all_preds, duration
 
             # Run once without measuring timing

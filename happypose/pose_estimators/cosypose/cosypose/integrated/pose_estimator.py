@@ -161,7 +161,7 @@ class PoseEstimator(PoseEstimationModule):
 
         if coarse_estimates is None:
             assert detections is not None or run_detector, (
-                "You must " "either pass in `detections` or set run_detector=True"
+                "You must either pass in `detections` or set run_detector=True"
             )
             if detections is None and run_detector:
                 start_time = time.time()

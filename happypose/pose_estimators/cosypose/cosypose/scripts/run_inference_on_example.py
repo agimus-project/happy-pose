@@ -74,9 +74,9 @@ def main():
     data_dir = os.getenv("HAPPYPOSE_DATA_DIR")
     assert data_dir, "Set HAPPYPOSE_DATA_DIR env variable"
     example_dir = Path(data_dir) / "examples" / args.example_name
-    assert (
-        example_dir.exists()
-    ), "Example {args.example_name} not available, follow download instructions"
+    assert example_dir.exists(), (
+        "Example {args.example_name} not available, follow download instructions"
+    )
     # dataset_to_use = args.dataset  # hope/tless/ycbv
 
     # Load data

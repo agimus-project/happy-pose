@@ -558,7 +558,7 @@ class PoseEstimator(PoseEstimationModule):
 
         if coarse_estimates is None:
             assert detections is not None or run_detector, (
-                "You must " "either pass in `detections` or set run_detector=True"
+                "You must either pass in `detections` or set run_detector=True"
             )
             if detections is None and run_detector:
                 start_time = time.time()
@@ -576,9 +576,9 @@ class PoseEstimator(PoseEstimationModule):
                     labels_to_keep,
                 )
 
-            assert (
-                len(detections) > 0
-            ), "TOFIX: currently, dealing with absence of detections is not supported"
+            assert len(detections) > 0, (
+                "TOFIX: currently, dealing with absence of detections is not supported"
+            )
 
             # Ensure that detections has the instance_id column
             detections = add_instance_id(detections)

@@ -39,7 +39,7 @@ class TensorCollection:
         del self._tensors[name]
 
     def __repr__(self):
-        s = self.__class__.__name__ + "(" "\n"
+        s = self.__class__.__name__ + "(\n"
         for k, t in self._tensors.items():
             s += f"    {k}: {t.shape} {t.dtype} {t.device},\n"
         s += ")"
@@ -131,10 +131,10 @@ class PandasTensorCollection(TensorCollection):
         return PandasTensorCollection(self.infos.copy(), **tensors)
 
     def __repr__(self):
-        s = self.__class__.__name__ + "(" "\n"
+        s = self.__class__.__name__ + "(\n"
         for k, t in self._tensors.items():
             s += f"    {k}: {t.shape} {t.dtype} {t.device},\n"
-        s += f"{'-'*40}\n"
+        s += f"{'-' * 40}\n"
         s += "    infos:\n" + self.infos.__repr__() + "\n"
         s += ")"
         return s

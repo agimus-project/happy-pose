@@ -118,7 +118,7 @@ class MultiviewPredictionRunner:
             view_ids = np.unique(gt_detections.infos["view_id"])
             group_id = np.unique(gt_detections.infos["group_id"])
             n_gt_dets = len(gt_detections)
-            logger.debug(f"{'-'*80}")
+            logger.debug(f"{'-' * 80}")
             logger.debug(f"Scene: {scene_id}")
             logger.debug(f"Views: {view_ids}")
             logger.debug(f"Group: {group_id}")
@@ -163,7 +163,7 @@ class MultiviewPredictionRunner:
                         candidates,
                         cameras,
                     )
-            logger.debug(f"{'-'*80}")
+            logger.debug(f"{'-' * 80}")
 
             for k, v in sv_preds.items():
                 predictions[k].append(v.cpu())

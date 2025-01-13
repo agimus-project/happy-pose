@@ -382,12 +382,12 @@ def train_megapose(cfg: TrainingConfig) -> None:
                     "td": f"{time_data:.3f}",
                     "tt": f"{time_iter:.3f}",
                 }
-                infos["it/s"] = f"{1. / time_iter:.2f}"
+                infos["it/s"] = f"{1.0 / time_iter:.2f}"
                 if not pbar.disable:
                     pbar.set_postfix(**infos)
                 else:
                     log_str = f"Epochs [{epoch}/{cfg.n_epochs}]"
-                    log_str += " " + f"Iter [{n+1}/{this_rank_n_batch_per_epoch}]"
+                    log_str += " " + f"Iter [{n + 1}/{this_rank_n_batch_per_epoch}]"
                     log_str += " " + " ".join([f"{k}={v}" for k, v in infos.items()])
 
                     logger.info(log_str)

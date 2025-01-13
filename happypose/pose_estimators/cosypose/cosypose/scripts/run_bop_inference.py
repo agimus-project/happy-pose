@@ -117,10 +117,10 @@ def load_pose_models(coarse_run_id, refiner_run_id=None, n_workers=8):
 
 
 def run_inference(args):
-    logger.info(f"{'-'*80}")
+    logger.info(f"{'-' * 80}")
     for k, v in args.__dict__.items():
         logger.info(f"{k}: {v}")
-    logger.info(f"{'-'*80}")
+    logger.info(f"{'-' * 80}")
 
     scene_ds = make_scene_dataset(args.ds_name, n_frames=args.n_frames)
 

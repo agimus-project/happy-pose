@@ -150,7 +150,7 @@ class PandasTensorCollection(TensorCollection):
         s = self.__class__.__name__ + "(\n"
         for k, t in self._tensors.items():
             s += f"    {k}: {t.shape} {t.dtype} {t.device},\n"
-        s += f"{'-'*40}\n"
+        s += f"{'-' * 40}\n"
         s += "    infos:\n" + self.infos.__repr__() + "\n"
         s += ")"
         return s
