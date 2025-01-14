@@ -5,100 +5,101 @@
 absl-py==2.1.0
 addict==2.4.0
 antlr4-python3-runtime==4.9.3
-anyio==4.6.2.post1
-asttokens==2.4.1
-attrs==24.2.0
+anyio==4.8.0
+asttokens==3.0.0
+attrs==24.3.0
 beautifulsoup4==4.12.3
-bokeh==3.6.1
-bop-toolkit-lib @ git+https://github.com/agimus-project/bop_toolkit@53b6e2e335c4e6aa76e5db34e809506ee3f4cf16
+bokeh==3.6.2
+bop-toolkit-lib @ git+https://github.com/agimus-project/bop_toolkit@7c28057c741afed432b521735e184741e25b8d73
 braceexpand==0.1.7
-certifi==2024.8.30
-cffi==1.17.1 ; os_name == 'nt' or implementation_name == 'pypy'
+certifi==2024.12.14
+cffi==1.17.1 ; (implementation_name == 'pypy' and os_name != 'nt') or (implementation_name == 'pypy' and sys_platform == 'darwin') or (implementation_name == 'pypy' and sys_platform == 'linux') or (implementation_name != 'pypy' and sys_platform == 'darwin' and extra == 'extra-9-happypose-cpu' and extra == 'extra-9-happypose-cu124') or (implementation_name != 'pypy' and sys_platform == 'linux' and extra == 'extra-9-happypose-cpu' and extra == 'extra-9-happypose-cu124') or (os_name == 'nt' and sys_platform != 'darwin' and sys_platform != 'linux') or (os_name != 'nt' and extra == 'extra-9-happypose-cpu' and extra == 'extra-9-happypose-cu124')
 cfgv==3.4.0
-charset-normalizer==3.4.0
-colorama==0.4.6 ; sys_platform == 'win32' or platform_system == 'Windows'
+charset-normalizer==3.4.1
+colorama==0.4.6 ; sys_platform == 'win32' or (extra == 'extra-9-happypose-cpu' and extra == 'extra-9-happypose-cu124')
 contourpy==1.3.1
-coverage==7.6.8
+coverage==7.6.10
 cycler==0.12.1
 cython==3.0.11
 decorator==5.1.1
 distlib==0.3.9
-exceptiongroup==1.2.2 ; python_full_version < '3.11'
+exceptiongroup==1.2.2 ; python_full_version < '3.11' or (extra == 'extra-9-happypose-cpu' and extra == 'extra-9-happypose-cu124')
 executing==2.1.0
 filelock==3.16.1
-fonttools==4.55.0
+fonttools==4.55.3
 freetype-py==2.5.1
-fsspec==2024.10.0
-grpcio==1.68.0
+fsspec==2024.12.0
+grpcio==1.69.0
 h11==0.14.0
 hsluv==5.0.4
 httpcore==1.0.7
-httpx==0.27.2
-identify==2.6.2
+httpx==0.28.1
+identify==2.6.5
 idna==3.10
-imageio==2.36.0
+imageio==2.36.1
 iniconfig==2.0.0
-ipython==8.29.0
+ipython==8.31.0
 jedi==0.19.2
-jinja2==3.1.4
+jinja2==3.1.5
 joblib==1.4.2
 jsonpatch==1.33
 jsonpointer==3.0.0
-kiwisolver==1.4.7
+kiwisolver==1.4.8
 lazy-loader==0.4
 markdown==3.7
 markupsafe==3.0.2
-matplotlib==3.9.2
+matplotlib==3.10.0
 matplotlib-inline==0.1.7
 meshcat==0.3.2
 mpmath==1.3.0
 mypy-extensions==1.0.0
 networkx==3.4.2
 nodeenv==1.9.1
-numpy==1.26.4
+numpy==1.26.4 ; python_full_version < '4' or (extra == 'extra-9-happypose-cpu' and extra == 'extra-9-happypose-cu124')
+numpy==2.2.1 ; python_full_version >= '4' or (extra == 'extra-9-happypose-cpu' and extra == 'extra-9-happypose-cu124')
 omegaconf==2.3.0
 outcome==1.3.0.post0
 packaging==24.2
 panda3d==1.10.15
 pandas==2.2.3
 parso==0.8.4
-pexpect==4.9.0 ; sys_platform != 'emscripten' and sys_platform != 'win32'
-pillow==11.0.0
+pexpect==4.9.0 ; (sys_platform != 'emscripten' and sys_platform != 'win32') or (sys_platform == 'emscripten' and extra == 'extra-9-happypose-cpu' and extra == 'extra-9-happypose-cu124') or (sys_platform == 'win32' and extra == 'extra-9-happypose-cpu' and extra == 'extra-9-happypose-cu124')
+pillow==11.1.0
 platformdirs==4.3.6
 pluggy==1.5.0
 plyfile==1.1
 pre-commit==4.0.1
 prompt-toolkit==3.0.48
-protobuf==5.28.3
-psutil==6.1.0
-ptyprocess==0.7.0 ; sys_platform != 'emscripten' and sys_platform != 'win32'
+protobuf==5.29.3
+psutil==6.1.1
+ptyprocess==0.7.0 ; (sys_platform != 'emscripten' and sys_platform != 'win32') or (sys_platform == 'emscripten' and extra == 'extra-9-happypose-cpu' and extra == 'extra-9-happypose-cu124') or (sys_platform == 'win32' and extra == 'extra-9-happypose-cpu' and extra == 'extra-9-happypose-cu124')
 pure-eval==0.2.3
 pybind11==2.13.6
 pybullet==3.2.6
-pycparser==2.22 ; os_name == 'nt' or implementation_name == 'pypy'
-pygments==2.18.0
-pyngrok==7.2.1
+pycparser==2.22 ; (implementation_name == 'pypy' and os_name != 'nt') or (implementation_name == 'pypy' and sys_platform == 'darwin') or (implementation_name == 'pypy' and sys_platform == 'linux') or (implementation_name != 'pypy' and sys_platform == 'darwin' and extra == 'extra-9-happypose-cpu' and extra == 'extra-9-happypose-cu124') or (implementation_name != 'pypy' and sys_platform == 'linux' and extra == 'extra-9-happypose-cpu' and extra == 'extra-9-happypose-cu124') or (os_name == 'nt' and sys_platform != 'darwin' and sys_platform != 'linux') or (os_name != 'nt' and extra == 'extra-9-happypose-cpu' and extra == 'extra-9-happypose-cu124')
+pygments==2.19.1
+pyngrok==7.2.3
 pyopengl==3.1.0
-pyparsing==3.2.0
+pyparsing==3.2.1
 pypng==0.20220715.0
 pyre-extensions==0.0.32
 pysocks==1.7.1
-pytest==8.3.3
+pytest==8.3.4
 python-dateutil==2.9.0.post0
 pytz==2024.2
 pyyaml==6.0.2
 pyzmq==26.2.0
 requests==2.32.3
 roma==1.5.1
-ruff==0.8.0
-scikit-image==0.24.0
-scikit-learn==1.5.2
-scipy==1.14.1
+ruff==0.9.1
+scikit-image==0.25.0
+scikit-learn==1.6.1
+scipy==1.15.1
 seaborn==0.13.2
-selenium==4.26.1
-setuptools==75.6.0
+selenium==4.27.1
+setuptools==75.8.0
 simplejson==3.19.3
-six==1.16.0
+six==1.17.0
 sniffio==1.3.1
 sortedcontainers==2.4.0
 soupsieve==2.6
@@ -108,27 +109,27 @@ tabulate==0.9.0
 tensorboard==2.18.0
 tensorboard-data-server==0.7.2
 threadpoolctl==3.5.0
-tifffile==2024.9.20
-tomli==2.1.0 ; python_full_version <= '3.11'
-torch==2.5.1 ; platform_system == 'Darwin'
-torch==2.5.1+cpu ; platform_system != 'Darwin'
+tifffile==2025.1.10
+tomli==2.2.1 ; python_full_version <= '3.11' or (extra == 'extra-9-happypose-cpu' and extra == 'extra-9-happypose-cu124')
+torch==2.5.1 ; sys_platform == 'darwin'
+torch==2.5.1+cpu ; sys_platform != 'darwin'
 torchnet==0.0.4
 torchtnt==0.2.4
-torchvision==0.20.1 ; platform_system == 'Darwin'
-torchvision==0.20.1+cpu ; platform_system != 'Darwin'
+torchvision==0.20.1 ; sys_platform == 'darwin'
+torchvision==0.20.1+cpu ; sys_platform != 'darwin'
 tornado==6.4.2
 tqdm==4.67.1
 traitlets==5.14.3
 transforms3d==0.4.2
-trimesh==4.5.2
-trio==0.27.0
+trimesh==4.5.3
+trio==0.28.0
 trio-websocket==0.11.1
 typing-extensions==4.12.2
 typing-inspect==0.9.0
 tzdata==2024.2
 u-msgpack-python==2.8.0
-urllib3==2.2.3
-virtualenv==20.27.1
+urllib3==2.3.0
+virtualenv==20.28.1
 visdom==0.2.4
 vispy==0.14.3
 wcwidth==0.2.13
@@ -136,6 +137,6 @@ webdataset==0.2.100
 websocket-client==1.8.0
 werkzeug==3.1.3
 wsproto==1.2.0
-xarray==2024.11.0
+xarray==2025.1.1
 xyzservices==2024.9.0
 --extra-index-url https://download.pytorch.org/whl/cpu
